@@ -1,8 +1,11 @@
 name: "Codemetrics sending report"
 description: "Sending Rubocop report to Codemetrics service"
+branding:
+  icon: upload-cloud
+  color: yellow
 runs:
   using: "composite"
   steps:
     - name: Run sending report
-      run: goodbye.sh
+      run: sending_rubocop_report.sh
       shell: bash
