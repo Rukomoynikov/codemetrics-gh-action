@@ -1,0 +1,8 @@
+name: "Codemetrics sending report"
+description: "Sending Rubocop report to Codemetrics service"
+runs:
+  using: "composite"
+  steps:
+    - name: Run sending report
+      run: goodbye.sh
+      shell: bash
