@@ -1,5 +1,9 @@
 name: "Codemetrics sending report"
 description: "Sending Rubocop report to Codemetrics service"
+inputs:
+  working-directory:
+    description: "Directory of the ruby project"
+    required: false
 branding:
   icon: upload-cloud
   color: yellow
@@ -15,3 +19,5 @@ runs:
     - name: Run sending report
       run: ${GITHUB_ACTION_PATH}/sending_rubocop_report.sh
       shell: bash
+      env:
+        INPUT_WORKING_DIRECTORY: ${{ inputs.working-directory }}
