@@ -18,4 +18,4 @@ curl --location 'https://codemetrics.dev/reports' \
 --form 'report=@"./rubocop-report.json"' \
 --form 'tool="rubocop"' \
 --form 'token="'"$CODEMETRICS_TOKEN"'"' \
---form 'branch="'"$GITHUB_HEAD_REF"'"'
+--form 'branch="'"$BRANCH_NAME"'"'

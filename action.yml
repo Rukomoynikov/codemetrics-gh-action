@@ -21,3 +21,4 @@ runs:
       shell: bash
       env:
         INPUT_WORKING_DIRECTORY: ${{ inputs.working-directory }}
+        BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
